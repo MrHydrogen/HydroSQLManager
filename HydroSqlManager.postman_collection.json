@@ -1,0 +1,571 @@
+{
+	"info": {
+		"_postman_id": "8991d51b-2079-4490-990f-96570ebfdd6d",
+		"name": "HydroSqlManager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"_postman_id": "2e223a39-c73d-4386-8f79-2d2743704f5e",
+			"name": "Get a record",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "chip_id",
+							"value": "1069",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "count",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "table_name",
+							"value": "AAAA",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "payment_method",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "device_type",
+							"value": "android",
+							"type": "text"
+						},
+						{
+							"key": "kharj_sanad",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "dong",
+							"value": "شش",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "saheb_pelak_id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "kharidar_id",
+							"value": "2",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "foro0shande_id",
+							"value": "2",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "بسیار زیبا",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "ghest_num",
+							"value": "20",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "percent_num",
+							"value": "18",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "ghest_start_datetime",
+							"value": "1525693505",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9000/Students/3/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"Students",
+						"3",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "4e2e77f6-e4bf-4c6d-807e-eefd6e4b30cb",
+			"name": "Create New Record",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "hossein",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "hashemi",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"sessionValue": null,
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9000/Students/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"Students",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "4787ccae-0219-4b86-94a0-e682b7256961",
+			"name": "Create Table",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "table_name",
+							"value": "Students",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "serial",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "varchar(255)",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "varchar(255)",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "5ad4b8d5-bc1c-431a-9590-2c675b61b555",
+			"name": "Update record",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": \"Hydrogen\"}"
+				},
+				"url": {
+					"raw": "http://localhost:9000/Students/3/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"Students",
+						"3",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "6bef47a3-65fe-4937-a174-e79c3df5aa45",
+			"name": "Delete a record",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "chip_id",
+							"value": "1069",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "count",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "table_name",
+							"value": "AAAA",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "payment_method",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "device_type",
+							"value": "android",
+							"type": "text"
+						},
+						{
+							"key": "kharj_sanad",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "dong",
+							"value": "شش",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "saheb_pelak_id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "kharidar_id",
+							"value": "2",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "foro0shande_id",
+							"value": "2",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "بسیار زیبا",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "ghest_num",
+							"value": "20",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "percent_num",
+							"value": "18",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "ghest_start_datetime",
+							"value": "1525693505",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9000/Students/36/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"Students",
+						"36",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "ae5beecd-98ab-4a48-8717-9fa8a463681e",
+			"name": "Get records of a table",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "chip_id",
+							"value": "1069",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "count",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "table_name",
+							"value": "AAAA",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "payment_method",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "device_type",
+							"value": "android",
+							"type": "text"
+						},
+						{
+							"key": "kharj_sanad",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "dong",
+							"value": "شش",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "saheb_pelak_id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "kharidar_id",
+							"value": "2",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "foro0shande_id",
+							"value": "2",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "بسیار زیبا",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "ghest_num",
+							"value": "20",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "percent_num",
+							"value": "18",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "ghest_start_datetime",
+							"value": "1525693505",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9000/Students/?offset=1&limit=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"Students",
+						""
+					],
+					"query": [
+						{
+							"key": "offset",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "d347c8ec-7ec3-4725-aadd-ae676e6aad81",
+			"name": "Get tables name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "chip_id",
+							"value": "1069",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "count",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "table_name",
+							"value": "AAAA",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "payment_method",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "device_type",
+							"value": "android",
+							"type": "text"
+						},
+						{
+							"key": "kharj_sanad",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "dong",
+							"value": "شش",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "saheb_pelak_id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "kharidar_id",
+							"value": "2",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "foro0shande_id",
+							"value": "2",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "بسیار زیبا",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "ghest_num",
+							"value": "20",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "percent_num",
+							"value": "18",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "ghest_start_datetime",
+							"value": "1525693505",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

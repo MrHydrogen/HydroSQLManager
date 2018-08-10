@@ -1,0 +1,57 @@
+version: '3.4'
+
+volumes:
+  db_data:
+
+services:
+
+  nginx:
+    build:
+      context: .
+      target: nginx
+    image: hydrosql:nginx-1
+    container_name: nginx
+    restart: always
+    links:
+      - app
+    environment:
+      - DB_NAME=$DB_NAME
+      - DB_USER=$DB_USER
+      - DB_PASS=$DB_PASS
+      - DB_HOST=$DB_HOST
+      - DB_PORT=$DB_PORT
+    ports:
+      - 9000:80
+    volumes:
+      - ./:/var/www/
+
+  app:
+    build:
+      context: .
+      target: app
+    image: hydrosql:app-1
+    container_name: app
+    restart: always
+    environment:
+      - DB_NAME=$DB_NAME
+      - DB_USER=$DB_USER
+      - DB_PASS=$DB_PASS
+      - DB_HOST=$DB_HOST
+      - DB_PORT=$DB_PORT
+      - APP_SERVICE=uwsgi
+    links:
+      - psql
+    volumes:
+      - ./:/var/www/
+
+  psql:
+    restart: always
+    image: postgres:9.6.9-alpine
+    environment:
+      - POSTGRES_USER=$DB_USER
+      - POSTGRES_PASSWORD=$DB_PASS
+      - POSTGRES_DB=$DB_NAME
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432

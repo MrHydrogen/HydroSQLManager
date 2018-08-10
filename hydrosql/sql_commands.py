@@ -1,0 +1,8 @@
+COMMANDS = {
+    "CREATE_TABLE": "CREATE TABLE {}({});",
+    "GET_RECORDS": "SELECT * FROM {} LIMIT {} OFFSET {};",
+    "GET_RECORD": "SELECT * FROM {} WHERE id={};",
+    "INSERT_RECORD": "INSERT INTO {} ({}) VALUES ({});",
+    "DELETE_RECORD": "DELETE FROM {} WHERE id={};",
+    "UPDATE_RECORD": "UPDATE {} SET {} WHERE id={};"
+}
